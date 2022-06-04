@@ -1,0 +1,70 @@
+@import '../../App.scss';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    color: #440B41;
+    text-align: center;
+    padding: 10px;
+    margin: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+
+    @include media('<=ipad') {
+        height: 290px;
+        min-width: 300px;
+        margin: 1rem;
+    }
+
+    @include media('<=tablet') {
+        height: 290px;
+        min-width: 300px;
+        margin: 1rem;
+    }
+
+    @include media('<=phone') {
+        height: 320px;
+        min-width: 290px;
+        margin: 2rem;
+        transform: translateX(35px);
+    }
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    .img-content,
+    .body1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+
+        h2{
+            margin-bottom: 1rem;
+        }
+
+        .card-img {
+            position: relative;
+            height: 100px;
+            width: 100px;
+            border-radius: 10%;
+            background: white;
+            padding: 5px;
+
+            .photo1 {
+                border-radius: 10%;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+}
